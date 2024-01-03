@@ -24,7 +24,11 @@ namespace Toy_Robot
 
                 try
                 {
+                    var msg = string.Empty;
                     commandProcessor.ProcessCommand(enteredCommand);
+
+                    if (!string.IsNullOrWhiteSpace(msg))
+                        Console.WriteLine(msg);
                 }
                 catch (Exception ex)
                 {
